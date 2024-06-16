@@ -22,7 +22,7 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Cryptocurrency>().
             HasOne(a => a.Price).
             WithOne(a=>a.Cryptocurrency).
-            HasForeignKey("CryptocurrencyId").
+            HasForeignKey<CryptocurrencyPrice>(a=>a.CryptocurrencyId).
             OnDelete(DeleteBehavior.Cascade);
 
         base.OnModelCreating(modelBuilder);

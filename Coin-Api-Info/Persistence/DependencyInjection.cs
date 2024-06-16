@@ -8,7 +8,7 @@ namespace Persistence;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddPersistence(this IServiceCollection
+    public static void AddPersistence(this IServiceCollection
             services, IConfiguration configuration, string connectionStringSection)
     {
         services.AddDbContext<ApplicationDbContext>(options =>
@@ -19,7 +19,5 @@ public static class DependencyInjection
         });
 
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-
-        return services;
     }
 }
