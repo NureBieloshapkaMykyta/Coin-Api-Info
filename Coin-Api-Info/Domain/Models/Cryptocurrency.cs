@@ -12,7 +12,7 @@ public class Cryptocurrency
 
     public string Symbol { get; set; }
 
-    public string Name { get; set; }
+    public decimal Price { get; set; }
 
-    public virtual CryptocurrencyPrice Price { get; set; }
+    public DateTime LastUpdated { get; set; }
 }
