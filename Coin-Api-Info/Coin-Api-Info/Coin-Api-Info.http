@@ -1,0 +1,6 @@
+@Coin_Api_Info_HostAddress = http://localhost:5045
+
+GET {{Coin_Api_Info_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
