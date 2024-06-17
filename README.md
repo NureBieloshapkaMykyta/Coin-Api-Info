@@ -32,74 +32,10 @@ CryptoPriceAPI is a .NET Core Web API that provides real-time price information 
 
 ### Configuration
 
-1. **AppSettings**: Configure the connection string and CoinAPI info in `appsettings.json`.
-
-   ```json
-   {
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning",
-      "Microsoft.Hosting.Lifetime": "Information"
-    }
-  },
-  "AllowedHosts": "*",
-  "ConnectionStrings": {
-    "DefaultConnection": ""
-  },
-  "CoinApi": {
-    "Client" : "",
-    "ApiKey": ""
-  }
-}
-```
+1. AppSettings: Configure the connection string and CoinAPI info in `appsettings.json`.
    
-3. **Docker Compose File**: Ensure your `docker-compose.yml` file is configured to include the API service and a Posgresql instance.
-
-    ```yaml
+2. Docker Compose File: Ensure your `docker-compose.yml` file is configured to include the API service and a Posgresql instance.
     version: '3.4'
-
-networks:
-  dev:
-    driver: bridge
-
-services:
-  coin-api-info:
-    image: ${DOCKER_REGISTRY-}coinapiinfo
-    depends_on:
-        - "coin-api.database"
-    container_name: coin-api-info.api
-    ports:
-        - "8080:80" 
-    build:
-      context: .
-      dockerfile: Coin-Api-Info/Dockerfile
-    environment:
-        - ConnectionStrings__DefaultConnection=User ID=postgres;Password=postgres;Server=coin-api.database;Port=5432;Database=coin-api;
-        - ASPNETCORE_URLS=http://+:80
-        - CoinApi__Client=CoinApiClient
-        - CoinApi__ApiKey=DCEB8DF1-9E76-49AE-A6E2-511B597A2AC3
-        
-    networks:
-        - dev
-
-  coin-api.database:
-    image: postgres:latest
-    container_name: coin-api.database
-    environment:
-        POSTGRES_DB : coin-api
-        POSTGRES_USER : postgres
-        POSTGRES_PASSWORD : postgres
-    ports:
-        - 5434:5432
-    volumes:
-        - "chatto-db:/var/lib/postgresql/data"
-    networks:
-            - dev
-
-volumes:
-    chatto-db:
-    ```
 
 ### Building and Running the Application
 
