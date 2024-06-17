@@ -6,14 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Coin_Api_Info.Controllers;
 
-[Route("[controller]")]
-public class CryptoCurrencyController : Controller
+[Route("api/[controller]")]
+public class CryptocurrencyController : Controller
 {
     private readonly IMapper _mapper;
 
     private readonly ICryptoCurrencyService _cryptoCurrencyService;
 
-    public CryptoCurrencyController(ICryptoCurrencyService cryptoCurrencyService, IMapper mapper)
+    public CryptocurrencyController(ICryptoCurrencyService cryptoCurrencyService, IMapper mapper)
     {
         _cryptoCurrencyService = cryptoCurrencyService;
         _mapper = mapper;
