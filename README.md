@@ -19,7 +19,7 @@ CryptoPriceAPI is a .NET Core Web API that provides real-time price information 
 2. **Get Price Information for Specified Cryptocurrencies**
    - **URL**: `/api/cryptocurrency/prices`
    - **Method**: `GET`
-   - **Query Parameters**: `symbols` (comma-separated list of cryptocurrency symbols, e.g., `BTC,ETH,XRP`)
+   - **Query Parameters**: `symbols` (list of cryptocurrency symbols, e.g., `BTC,ETH,XRP`)
    - **Response**: JSON array with price information for specified cryptocurrencies
 
 ## Prerequisites
