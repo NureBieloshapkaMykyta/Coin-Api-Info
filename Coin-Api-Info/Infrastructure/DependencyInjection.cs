@@ -13,5 +13,6 @@ public static class DependencyInjection
     {
         services.AddHttpClient(configuration);
         services.AddScoped<ICoinApiService, CoinApiService>();
+        services.AddScoped<ICoinApiWebSocketService, CoinApiWebSocketService>();
     }
 }

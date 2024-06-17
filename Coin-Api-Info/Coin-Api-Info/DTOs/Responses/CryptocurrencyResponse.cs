@@ -2,10 +2,7 @@
 
 public class CryptocurrencyResponse
 {
-    public class Cryptocurrency
-    {
-        public Guid Id { get; set; }
+    public Guid Id { get; set; }
 
-        public string Symbol { get; set; }
-    }
+    public string Symbol { get; set; }
 }

@@ -9,5 +9,6 @@ public class CryptoCurrencyProfile : Profile
     public CryptoCurrencyProfile()
     {
         CreateMap<Cryptocurrency, CryptocurrencyResponse>();
+        CreateMap<Cryptocurrency, CryptocurrencyPriceResponse>();
     }
 }

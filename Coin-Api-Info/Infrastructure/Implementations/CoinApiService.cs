@@ -34,13 +34,6 @@ public class CoinApiService : ICoinApiService
                 Price = rate.rate
             });
         }
-        catch (Exception e) when (
-            e is InvalidOperationException ||
-            e is TaskCanceledException ||
-            e is UriFormatException)
-        {
-            throw;
-        }
         catch (HttpRequestException e)
         {
             return Result.Failure<Cryptocurrency>("Invalid data provided to access third-party API" + e.InnerException);

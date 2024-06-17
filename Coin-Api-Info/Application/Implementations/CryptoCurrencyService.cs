@@ -4,12 +4,13 @@ using Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Application.Implementations;
 
-public class CryptoCurrencyService
+public class CryptoCurrencyService : ICryptoCurrencyService
 {
     private readonly IRepository<Cryptocurrency> _cryptoCurrencyRepository;
 
@@ -19,6 +20,12 @@ public class CryptoCurrencyService
     {
         _cryptoCurrencyRepository = cryptoCurrencyRepository;
         _coinApiService = coinApiService;
+    }
+
+    public async Task<Result<IEnumerable<Cryptocurrency>>> GetAllAsync(
+        Expression<Func<Cryptocurrency, bool>>? filter = null)
+    {
+        return await _cryptoCurrencyRepository.GetAllAsync(filter);
     }
 
     public async Task<Result<IEnumerable<Cryptocurrency>>> GetPriceInformation(List<string> symbols)
