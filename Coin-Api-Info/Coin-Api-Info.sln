@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coin-Api-Info", "Coin-Api-Info\Coin-Api-Info.csproj", "{7A016D70-46DA-4C05-8959-2CD32180E50F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{D85325DA-A6FF-4FA5-804D-1631E1F2D9C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{6AAE8271-5925-4335-86B3-98F06F0044A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{5D7E379B-C291-423B-B772-9881F6E73334}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{B03E88F9-56EE-4CCF-90C6-0029F8346044}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{544A16C9-CCDC-4A69-9CA6-8A73BF9129D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A016D70-46DA-4C05-8959-2CD32180E50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A016D70-46DA-4C05-8959-2CD32180E50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A016D70-46DA-4C05-8959-2CD32180E50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A016D70-46DA-4C05-8959-2CD32180E50F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D85325DA-A6FF-4FA5-804D-1631E1F2D9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D85325DA-A6FF-4FA5-804D-1631E1F2D9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D85325DA-A6FF-4FA5-804D-1631E1F2D9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D85325DA-A6FF-4FA5-804D-1631E1F2D9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AAE8271-5925-4335-86B3-98F06F0044A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AAE8271-5925-4335-86B3-98F06F0044A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AAE8271-5925-4335-86B3-98F06F0044A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AAE8271-5925-4335-86B3-98F06F0044A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D7E379B-C291-423B-B772-9881F6E73334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D7E379B-C291-423B-B772-9881F6E73334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D7E379B-C291-423B-B772-9881F6E73334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D7E379B-C291-423B-B772-9881F6E73334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03E88F9-56EE-4CCF-90C6-0029F8346044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03E88F9-56EE-4CCF-90C6-0029F8346044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03E88F9-56EE-4CCF-90C6-0029F8346044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03E88F9-56EE-4CCF-90C6-0029F8346044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{544A16C9-CCDC-4A69-9CA6-8A73BF9129D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{544A16C9-CCDC-4A69-9CA6-8A73BF9129D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{544A16C9-CCDC-4A69-9CA6-8A73BF9129D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{544A16C9-CCDC-4A69-9CA6-8A73BF9129D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D07CB3F-000C-4098-B471-CC34236D7D3A}
+	EndGlobalSection
+EndGlobal
